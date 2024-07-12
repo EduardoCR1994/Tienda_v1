@@ -4,10 +4,6 @@
  */
 package com.tienda;
 
-/**
- *
- * @author tagos
- */
 public class ProjectConfig {
     
 }
