@@ -1,0 +1,24 @@
+
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                </head>
+                <body>
+                    <html xmlns="http://www.w3.org/1999/xhtml"      
+                          xmlns:th="http://www.thymeleaf.org">    
+                        <head th:replace="~{layout/plantilla :: head}">        
+                            <title>TechShop</title>    
+                        </head>    
+                        <body>        
+                            <header th:replace="~{layout/plantilla :: header}"/>      
+                            
+                            <section th:replace="~{pruebas/fragmentos :: categoriasTabs}"/> <!<!-- comment -->Menu de las categorias<!-- comment -->       
+                            <section th:replace="~{pruebas/fragmentos :: listadoProductos}"/>         <!<!-- comment -->Tabla de productos<!-- comment --> 
+                            
+                            <footer th:replace="~{layout/plantilla :: footer}"/>                
+                        </body>
+                    </html>
+                </body>
+                </html>
