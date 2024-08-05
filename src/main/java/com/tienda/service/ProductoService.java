@@ -14,5 +14,7 @@ public interface ProductoService {
     public void save (Producto producto);
     //metodo eliminar
     public void delete (Producto producto);
+    
+     public List<Producto> findByPrecioBetweenOrderByDescripcion(double precioInf, double precioSup);
             
 }
