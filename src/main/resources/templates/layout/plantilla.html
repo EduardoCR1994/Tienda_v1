@@ -23,7 +23,8 @@
                         <ul class="navbar-nav"sec:authorize='hasRole("ROLE_VENDEDOR")'>
                             <li class="nav-item px-2"><a class="nav-menu-link nav-link" th:href="@{/categoria/listado}">[[#{plantilla.categorias}]]</a></li>
                             <li class="nav-item px-2"><a class="nav-menu-link nav-link" th:href="@{/producto/listado}">[[#{plantilla.productos}]]</a></li>
-
+                            <li class="nav-item px-2"><a class="nav-menu-link nav-link" th:href="@{/usuario/listado}">[[#{plantilla.usuarios}]]</a></li>
+                            <li class="nav-item px-2"><a class="nav-menu-link nav-link" th:href="@{/carrito/listado}">[[#{plantilla.carrito}]]</a></li>
                             <li class="nav-item dropdown"sec:authorize='hasRole("ROLE_ADMIN")'>
                                 <a class="nav-link dropdown-toggle" 
                                    data-bs-toggle="dropdown" 
@@ -33,9 +34,10 @@
                                 <ul class="dropdown-menu dropdown-menu-dark">
                                     <li><a class="dropdown-item"  th:href="@{/pruebas/listado}">[[#{plantilla.asociaciones}]]</a></li>
                                     <li><a class="dropdown-item" th:href="@{/pruebas/listado2}">[[#{plantilla.consultas}]]</a></li>
+                                    <li><a class="dropdown-item" th:href="@{/carrito/listado}">[[#{plantilla.carrito}]]</a></li>
                                 </ul>
                             </li>
-                            <li class="nav-item px-2"><a class="nav-menu-link nav-link" th:href="@{/usuario/listado}">[[#{plantilla.usuarios}]]</a></li>
+
                         </ul>
                         <div class="col-md-3"> 
                             <ul class="navbar-nav">
@@ -44,28 +46,28 @@
                             </ul>
                         </div>
                     </div>   
-                    
+
                 </div>
                 <ul class="navbar-nav" sec:authorize="!isAuthenticated()">
-                        <li class="nav-item px-2">
-                            <a class="nav-menu-link nav-link"
-                               th:href="@{/login}">
-                                <i class="fas fa-sign-in-alt"></i>
-                            </a> 
-                        </li>
-                        <li class="nav-item text-white my-auto">
-                            <i class="fas fa-user"></i>
-                            <span sec:authentication="name">Bob</span>
-                        </li>
-                        <li class="nav-item my-auto">
-                            <form method="post" th:action="@{/logout}">
-                                <button class="btn btn-dark">
-                                    <i class="fas fa-sign-out-alt"></i>
-                                </button>
-                            </form>
-                        </li>
+                    <li class="nav-item px-2">
+                        <a class="nav-menu-link nav-link"
+                           th:href="@{/login}">
+                            <i class="fas fa-sign-in-alt"></i>
+                        </a> 
+                    </li>
+                    <li class="nav-item text-white my-auto">
+                        <i class="fas fa-user"></i>
+                        <span sec:authentication="name">Bob</span>
+                    </li>
+                    <li class="nav-item my-auto">
+                        <form method="post" th:action="@{/logout}">
+                            <button class="btn btn-dark">
+                                <i class="fas fa-sign-out-alt"></i>
+                            </button>
+                        </form>
+                    </li>
 
-                    </ul>
+                </ul>
             </nav>
             <section id="main-header" class="py-2 bg-success text-white">
                 <div class="container">
